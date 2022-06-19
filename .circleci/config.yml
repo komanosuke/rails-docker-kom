@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/ruby:2.7
+      - image: circleci/ruby:2.6.5-stretch-node
     working_directory: ~/rails-docker-kom/src
     steps:
       - checkout:
