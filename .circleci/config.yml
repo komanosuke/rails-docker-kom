@@ -6,7 +6,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cimg/ruby:2.7
+      - image: circleci/ruby:2.7
     working_directory: ~/rails-docker-kom/src
     steps:
       - checkout:
@@ -15,8 +15,8 @@ jobs:
 
   test:
     docker:
-      - image: cimg/ruby:2.7
-      - image: cimg/mysql:5.5
+      - image: circleci/ruby:2.7
+      - image: circleci/mysql:5.5
         environment:
           MYSQL_ROOT_PASSWORD: password
           MYSQL_DATABASE: app_test
@@ -32,15 +32,18 @@ jobs:
           path: ~/rails-docker-kom
       - ruby/install-deps
       - run:
+          name: Bundle install
+          command: bundle config set path './vendor/bundle' && bundle install
+      - run:
           name: Database setup
-          command: bundle install && bundle exec rails db:migrate
+          command: bundle exec rails db:migrate
       - run:
           name: test
           command: bundle exec rake test
 
   deploy:
     docker:
-      - image: cimg/ruby:2.7
+      - image: circleci/ruby:2.7
     steps:
       - checkout
       - setup_remote_docker:
