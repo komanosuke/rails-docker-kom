@@ -6,10 +6,9 @@ orbs:
 jobs:
   build:
     docker:
-      - image: cjruby:9.3
+      - image: circleci/ruby:2.7
     working_directory: ~/rails-docker-kom/src
     steps:
-      - run: sudo apt-get update && sudo apt-get install -y git sudo tar
       - checkout:
           path: ~/rails-docker-kom
       - ruby/install-deps
