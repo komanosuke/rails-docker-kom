@@ -14,9 +14,9 @@ src/tmp/*
 !src/tmp/.keep
 
 # Ignore pidfiles, but keep the directory.
-/tmp/pids/*
-!/tmp/pids/
-!/tmp/pids/.keep
+src/tmp/pids/*
+!src/tmp/pids/
+!src/tmp/pids/.keep
 
 # Ignore uploaded files in development.
 src/storage/*
