@@ -12,7 +12,7 @@ jobs:
       - checkout:
           path: ~/rails-docker-kom
       - ruby/install-deps
-  
+
   test:
     docker:
       - image: circleci/ruby:2.7
@@ -38,7 +38,7 @@ jobs:
           name: test
           command: bundle exec rake test
 
-deploy:
+  deploy:
     docker:
       - image: circleci/ruby:2.7
     steps:
@@ -58,7 +58,6 @@ deploy:
       - run:
           name: database setup
           command: heroku run bundle exec rake db:migrate RAILS_ENV=production -a $HEROKU_APP_NAME
-
 
 workflows:
   version: 2
