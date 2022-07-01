@@ -1,0 +1,778 @@
+@charset "utf-8";
+
+
+
+
+
+#result {
+    visibility: hidden;
+}
+
+
+
+
+html {
+    overflow: auto;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+
+header {
+    background-color:black;
+    padding: 20px;
+    color: white;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    min-width: 320px;
+    height: 50px;
+}
+
+
+#logo a {
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    font-family: 'Londrina Solid', cursive;
+}
+
+
+
+.nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+}
+
+
+.nav li {
+    text-align: center;
+    margin-right: 4px;
+    height: 50px;
+    width: 100px;
+    line-height: 50px;
+    padding: 0%;
+}
+
+
+.nav li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.nav li div {
+    max-height: 0px;
+    overflow: hidden;
+    -webkit-transition:max-height 0.3s linear;
+    -moz-transition:max-height 0.3s linear;
+    transition:max-height 0.3s linear;
+}
+
+
+.js-btn {
+    visibility: hidden;
+}
+
+
+
+
+.btn {
+    margin: 0 20px 0 0;
+    min-width: 160px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+
+
+.btn a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    padding: 13px;
+    background-color: silver;
+}
+
+.btn a:hover {
+    background-color: white;
+    color: black;
+}
+
+
+#manga_box {
+    width: 100%;
+    text-align: center;
+}
+
+#manga_box img {
+    width: 90%;
+}
+
+
+.back {
+    width: 65%;
+    background-color: rgb(0,0,0,0.8);
+    margin: auto;
+    padding: 90px 0 500px;
+    text-align: center;
+}
+
+
+#title {
+    font-size: 100px;
+    text-align: center;
+    line-height: 100px;
+    margin: 50px auto 20px;
+    font-family: 'Londrina Solid', cursive;
+}
+
+.contents h1::before {
+    display: block;
+    height: 110px;
+    margin-top: -110px;
+    content: "";
+}
+
+
+h1,h2, .picture_title {
+    text-align: center;
+}
+
+#movie {
+    text-align: center;
+    margin: 20px auto;
+}
+
+#movie video {
+    height: 360px;
+    width: 640px;
+}
+
+
+
+
+.contents {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+
+.contents p {
+    margin: auto;
+    width: 90%;
+}
+
+#tocbox {
+    margin: auto;
+    width: 60%;
+    list-style: none;
+    padding-bottom: 110px;
+}
+
+.toc li {
+    
+    text-align: center;
+    color: white;
+}
+
+.toc li a {
+    text-decoration: none;
+    background-color: rgb(0,0,0,0.5);
+    color: white;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.toc li a:hover {
+    background-color:goldenrod;
+    font-weight: bold;
+}
+
+
+
+#subjects {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+#subjects li {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin: 4px auto;
+    width: 25%;
+    min-width: 160px;
+}
+
+
+#subjects li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+
+#subjects p {
+    text-align: center;
+}
+
+
+
+#page_top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 4px;
+    bottom: 4px;
+    background: white;
+    opacity: 0.4;
+    border-radius: 25px;
+}
+
+
+#page_top:hover {
+    background-color: gray;
+    opacity: 0.9;
+}
+
+#page_top a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+}
+
+#page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: black;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+}
+
+iframe {
+    display: block;
+    margin: 20px auto;
+}
+
+
+#question {
+    text-align: center;
+}
+
+
+.notyet {
+    width: 90%;
+}
+
+
+
+#japanese:hover #japanese_menu {
+    max-height: 150px;
+}
+
+
+#japanese, .japanese_top, .japanese_school {
+    background-color:firebrick;
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+#japanese a:hover, .japanese_top a:hover, .japanese_school a:hover {
+    background-color:rgb(216, 70, 70);
+}
+
+
+
+#math:hover #math_menu {
+    max-height: 150px;
+}
+
+
+#math, .math_top, .math_school {
+    background-color: teal;
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+#math a:hover, .math_top a:hover, .math_school a:hover {
+    background-color: rgb(30, 170, 170);
+}
+
+
+
+#social:hover #social_menu {
+    max-height: 150px;
+}
+
+
+#social, .social_top, .social_school {
+    background-color:goldenrod;
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+#social a:hover, .social_top a:hover, .social_school a:hover {
+    background-color:rgb(255, 205, 80);
+}
+
+
+
+
+#science:hover #science_menu {
+    max-height: 150px;
+}
+
+
+#science, .science_top, .science_school {
+    background-color: forestgreen;
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+#science a:hover, .science_top a:hover, .science_school a:hover {
+    background-color: rgb(70, 179, 70);
+}
+
+
+
+
+
+#english:hover #english_menu {
+    max-height: 150px;
+}
+
+#english, .english_top, .english_school {
+    background-color: #948bdb;
+    cursor: pointer;
+    cursor: hand;
+}
+
+#english a:hover, .english_top a:hover, .english_school a:hover {
+    background-color: #aea9d7;
+}
+
+
+
+
+#index {
+    background-image: url(/assets/index.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*教科 背景*/
+#index_japanese {
+    background-image: url(/assets/japanese.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_math {
+    background-image: url(/assets/math.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_social {
+    background-image: url(/assets/social.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_science {
+    background-image: url(/assets/science.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_english {
+    background-image: url(/assets/english.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*高校国語 背景*/
+#index_gendaibun {
+    background-image: url(/assets/gendaibun.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_kobun {
+    background-image: url(/assets/kobun.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_bunpo {
+    background-image: url(/assets/bunpo.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+/*高校社会 背景*/
+#index_w_history {
+    background-image: url(/assets/w_history.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_j_history {
+    background-image: url(/assets/j_history.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_geography {
+    background-image: url(/assets/geography.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_ethics {
+    background-image: url(/assets/ethics.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_pol_eco {
+    background-image: url(/assets/pol_eco.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+/*高校理科 背景*/
+#index_physics {
+    background-image: url(/assets/physics.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_chemistry {
+    background-image: url(/assets/chemistry.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_biology {
+    background-image: url(/assets/biology.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_geology {
+    background-image: url(/assets/geology.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+
+
+/*高校英語 背景*/
+#index_listening {
+    background-image: url(/assets/listening.jpeg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_speaking {
+    background-image: url(/assets/speaking.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_reading {
+    background-image: url(/assets/reading.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_writing {
+    background-image: url(/assets/writing.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#index_grammar {
+    background-image: url(/assets/grammar.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+@media screen and (max-width:600px) {
+    body {
+        font-size: 3.5vw;
+    }
+
+    h1 {
+        font-size: 7.2vw;
+    }
+
+    h2 {
+        font-size: 6vw;
+    }
+
+    header {
+        height: 20px;
+    }
+
+    #title {
+        font-size: 10vw;
+        line-height: 40px;
+        margin: 0px auto 20px;
+    }
+
+    #logo {
+        min-width: 160px;
+        height: 20px;
+    }
+
+    #logo a {
+        font-size: 6vw;
+        line-height: 100%;
+    }
+
+    #page_top{
+        width: 45px;
+        height: 45px;
+        border-radius: 22.5px;
+    }
+
+    #page_top a {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .nav {
+        position: fixed;
+        right: -70%;
+        width: 50%;
+        height: 100vh;
+        margin-left: auto;
+        margin-top: 40px;
+        /* メニューを縦に */
+        display: flex;
+        flex-direction: column;
+        color: #efefef;
+        transition: .3s;
+      }
+
+    .nav li {
+        width: 100%;
+        height: 8%;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .nav li div {
+        display: none;
+    }
+
+
+    .back {
+        width: 90%;
+        background-color: rgb(0,0,0,0.8);
+        margin: auto;
+        padding: 90px 0 500px;
+    }
+
+    .js-btn {
+        /* ボタンの配置位置  */
+        position: fixed;
+        top: 7.5px;
+        right: 7.5px;
+        /* ボタンの大きさ  */
+        width: 45px;
+        height: 45px;
+        /* 最前面に */
+        z-index: 10;
+        background-color: gray; /* わかりやすいように */
+        opacity: 0.6;
+        border-radius: 22.5px;
+        border-style: none;
+        visibility: visible;
+      }
+
+    .btn-line {
+        display: block;
+        position: relative;  /* バーガー線の位置基準として設定 */
+        width: 90%;  /* 線の長さと高さ */
+        height: 5px;
+        background-color: black;  /* バーガー線の色 */
+        border-radius: 2.5px;
+        transition: .2s;
+        margin: auto;
+    }
+
+        /****** 上下のバーガー線 *****/
+    .btn-line::before,
+    .btn-line::after {
+        content: "";
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        border-radius: 2.5px;
+        transition: .5s;
+    }
+
+    .btn-line::before {
+    /* 上の線の位置 */
+        transform: translateY(-10px);
+    }
+
+    .btn-line::after {
+    /* 下の線の位置 */
+        transform: translateY(10px);
+    }
+
+    .nav.open {
+        right: 0;
+    }
+
+    .nav.close {
+        right: -70%;
+        transition: .3s;
+    }
+
+    /***** メニューオープン時 *****/
+    .btn-line.open {
+        background-color: transparent;  	/* 真ん中の線を透明に */
+    }
+
+    .btn-line.open::before ,
+    .btn-line.open::after {
+        content: "";
+        background-color: #333;  /* 上下の線の色を変える */
+        transition: .2s;
+    }
+
+    .btn-line.open::before {
+        transform: rotate(45deg);  /* 上の線を傾ける */
+    }
+
+    .btn-line.open::after {
+        transform: rotate(-45deg);  /* 下の線を傾ける */
+    }
+
+}

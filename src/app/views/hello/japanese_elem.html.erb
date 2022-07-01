@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LIBERAL EARTH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap" rel="stylesheet">
+    <link href="/assets/prototype.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
+    <link href="/assets/favicon.ico" rel="shortcut icon">
+    <%= javascript_pack_tag 'jquery'%>
+</head>
+
+<body id="index_japanese">
+<header>
+    <div id="logo"><a href="/">LIBERAL EARTH</a></div>
+    <div class="link">
+        <ul class="nav">
+            <li id="japanese">
+                <a href="/hello/japanese">国語</a>
+                <div id="japanese_menu">
+                    <ul>
+                        <li class="japanese_top"><a href="/hello/japanese_elem">小学校国語</a></li>
+                        <li class="japanese_top"><a href="/hello/japanese_j_high">中学校国語</a></li>
+                        <li class="japanese_top"><a href="/hello/japanese_high">高校国語</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li id="math">
+                <a href="/hello/math">数学</a>
+                <div id="math_menu">
+                    <ul>
+                        <li class="math_top"><a href="/hello/math_elem">小学校算数</a></li>
+                        <li class="math_top"><a href="/hello/math_j_high">中学校数学</a></li>
+                        <li class="math_top"><a href="/hello/math_high">高校数学</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li id="social">
+                <a href="/hello/social_studies">社会</a>
+                <div id="social_menu">
+                    <ul>
+                        <li class="social_top"><a href="/hello/social_studies_elem">小学校社会</a></li>
+                        <li class="social_top"><a href="/hello/social_studies_j_high">中学校社会</a></li>
+                        <li class="social_top"><a href="/hello/social_studies_high">高校社会</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li id="science">
+                <a href="/hello/science">理科</a>
+                <div id="science_menu">
+                    <ul>
+                        <li class="science_top"><a href="/hello/science_elem">小学校理科</a></li>
+                        <li class="science_top"><a href="/hello/science_j_high">中学校理科</a></li>
+                        <li class="science_top"><a href="/hello/science_high">高校理科</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li id="english">
+                <a href="/hello/english">英語</a>
+                <div id="english_menu">
+                    <ul>
+                        <li class="english_top"><a href="/hello/english_elem">小学校英語</a></li>
+                        <li class="english_top"><a href="/hello/english_j_high">中学校英語</a></li>
+                        <li class="english_top"><a href="/hello/english_high">高校英語</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+</div>
+
+    <button type="button" class="js-btn">
+        <span class="btn-line"></span>
+    </button>
+    <div class="btn"><%=link_to 'ログイン', {action:'login_check'}  %></div>
+</header>
+
+<div class="back">
+    <div id="page_top"><a href="#"></a></div>
+    <div id="title">JAPANESE</div>
+        <ul id="subjects">
+            <li class="japanese_school">
+                <a id="japanese_elem_1">小１国語</a>
+            </li>
+            <li class="japanese_school">
+                <a id="japanese_elem_2">小２国語</a>
+            </li>
+            <li class="japanese_school">
+                <a id="japanese_elem_3">小３国語</a>
+            </li>
+            <li class="japanese_school">
+                <a id="japanese_elem_4">小４国語</a>
+            </li>
+            <li class="japanese_school">
+                <a id="japanese_elem_5">小５国語</a>
+            </li>
+            <li class="japanese_school">
+                <a id="japanese_elem_6">小６国語</a>
+            </li>
+        </ul>
+    <div id="root"></div>
+    <%= javascript_pack_tag 'prototype'%>
+    <%= javascript_pack_tag 'japanese_elem' %>
+    <div id="manga_box">
+        <img src="/assets/manga.PNG">
+    </div>
+</div>
+
+<footer>
+    <small>(C) 2022 LIBERAL EARTH (学習サイト) All Rights Reserved.</small>
+</footer>
+
+</body>
+</html>
