@@ -9,9 +9,7 @@ RUN curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - \
 WORKDIR /app
 COPY ./src /app/
 RUN bundle config --local set path 'vendor/bundle' \
-    && bundle install \
-    && rails webpacker:install \
-    && rails webpacker:compile
+    && bundle install
 
 COPY start.sh /start.sh
 RUN chmod 744 /start.sh
