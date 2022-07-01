@@ -1,0 +1,14 @@
+#subjects {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#science:hover #science_menu {
+    max-height: 150px;
+}
+
+.science_school {
+    background-color:forestgreen;
+}
